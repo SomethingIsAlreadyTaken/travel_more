@@ -3,7 +3,7 @@
 }
 
 @mixin tr($prop) {
-	transition: $prop .3s ease-in;
+	transition: $prop .4s ease-in;
 }
 
 @mixin hover {
@@ -12,6 +12,19 @@
 	&:focus,
 	&:active,
 	&--active {
+		@content;
+	}
+}
+
+@mixin bgcover {
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+@mixin ba {
+	&::after,
+	&::before {
 		@content;
 	}
 }
